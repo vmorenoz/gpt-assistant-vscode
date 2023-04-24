@@ -9,8 +9,11 @@
   "categories": [
     "Other"
   ],
+  "publisher": "victormoreno",
+  "repository": "https://github.com/vmorenoz/gpt-assistant-vscode",
   "activationEvents": [],
   "main": "./out/extension.js",
+  "icon": "./src/icon.png",
   "contributes": {
     "commands": [
       {
