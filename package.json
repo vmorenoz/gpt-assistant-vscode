@@ -2,6 +2,7 @@
   "name": "gpt-assistant",
   "displayName": "GPT Assistant",
   "description": "An assistant that use gpt to generate unit test of angular project files",
+  "icon": "images/icon.png",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.77.0"
@@ -13,7 +14,6 @@
   "repository": "https://github.com/vmorenoz/gpt-assistant-vscode",
   "activationEvents": [],
   "main": "./out/extension.js",
-  "icon": "./src/icon.png",
   "contributes": {
     "commands": [
       {
