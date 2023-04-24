@@ -1,0 +1,93 @@
+{
+  "name": "gpt-assistant",
+  "displayName": "GPT Assistant",
+  "description": "An assistant that use gpt to generate unit test of angular project files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gpt-assistant.generateUnitTests",
+        "title": "GPT: Generar pruebas unitarias"
+      },
+      {
+        "command": "gpt-assistant.refactoring",
+        "title": "GPT: Refactorizar código"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "gpt-assistant.generateUnitTests",
+          "group": "navigation"
+        },
+        {
+          "command": "gpt-assistant.refactoring",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "GPT Assistant",
+      "properties": {
+        "gptAssistant.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API Key para OpenAI"
+        },
+        "gptAssistant.maxTokens": {
+          "type": "number",
+          "default": 2000,
+          "description": "Número máximo de tokens en la respuesta de GPT"
+        },
+        "gptAssistant.unitTestsPrompt": {
+          "type": "string",
+          "default": "Act as a software development expert, especially in unit testing of Angular with Karma. Given the following TypeScript code, generate efficient unit tests with high code coverage and minimize resource imports by using mocks. Here's the code:",
+          "description": "Prompt para generacion de pruebas unitarias"
+        },
+        "gptAssistant.refactoringPrompt": {
+          "type": "string",
+          "default": "Act as a software development expert in refactoring TypeScript code. Refactor the following code to make it cleaner, more maintainable, and efficient, without losing any functionality. Here's the code:",
+          "description": "Prompt para refactorizacion"
+        },
+        "gptAssistant.model": {
+          "type": "string",
+          "default": "text-davinci-003",
+          "description": "Modelo GPT"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1"
+  }
+}

@@ -1,71 +1,50 @@
-# gpt-assistant README
+# GPT Assistant
 
-This is the README for your extension "gpt-assistant". After writing up a brief description, we recommend including the following sections.
+GPT Assistant es una extensión para Visual Studio Code que utiliza el modelo GPT-3 de OpenAI para generar automáticamente pruebas unitarias y refactorizar el código TypeScript. Mejora la productividad del desarrollador al proporcionar asistencia inteligente en el proceso de desarrollo de software.
 
-## Features
+## Características
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Generar pruebas unitarias automáticamente para funciones TypeScript en proyectos de Angular utilizando Karma.
+- Refactorizar el código TypeScript sin perder funcionalidad.
+- Integración fácil con la API de OpenAI GPT-3.
 
-For example if there is an image subfolder under your extension project workspace:
+## Requisitos previos
 
-\!\[feature X\]\(images/feature-x.png\)
+- Debes tener una API Key de OpenAI GPT-3 para utilizar esta extensión. Si aún no tienes una, puedes solicitarla en la [página web de OpenAI](https://beta.openai.com/signup/).
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Instalación
 
-## Requirements
+1. Abre Visual Studio Code.
+2. Ve al panel de extensiones (Ctrl+Shift+X en Windows, Cmd+Shift+X en macOS) y busca "GPT Assistant".
+3. Haz clic en "Install" para instalar la extensión.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Configuración
 
-## Extension Settings
+1. Abre la configuración de Visual Studio Code (Ctrl+, en Windows, Cmd+, en macOS).
+2. Busca "GPT Assistant" en la barra de búsqueda.
+3. Establece la API Key de OpenAI GPT-3 en el campo "API Key".
+4. (Opcional) Establece el número máximo de tokens para las respuestas de GPT-3 en el campo "Max Tokens".
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Uso
 
-For example:
+### Generar pruebas unitarias
 
-This extension contributes the following settings:
+1. Abre un archivo TypeScript en un proyecto de Angular.
+2. Selecciona una función en el código.
+3. Haz clic con el botón derecho del ratón y selecciona "Generar prueba unitaria" en el menú contextual.
+4. La extensión generará automáticamente pruebas unitarias para la función seleccionada y las mostrará en un nuevo archivo.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+### Refactorizar código
 
-## Known Issues
+1. Abre un archivo TypeScript.
+2. Selecciona un fragmento de código.
+3. Haz clic con el botón derecho del ratón y selecciona "Refactorizar código" en el menú contextual.
+4. La extensión refactorizará automáticamente el código seleccionado y lo mostrará en un nuevo archivo.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Contribuciones
 
-## Release Notes
+Las contribuciones son siempre bienvenidas. Por favor, siéntete libre de informar de problemas o solicitudes de características a través de [GitHub Issues](https://github.com/vmorenoz/gpt-assistant-vscode/issues).
 
-Users appreciate release notes as you update your extension.
+## Licencia
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[MIT License](https://opensource.org/licenses/MIT)
