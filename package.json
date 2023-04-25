@@ -3,7 +3,7 @@
   "displayName": "GPT Assistant",
   "description": "An assistant that use gpt to generate unit test of angular project files",
   "icon": "images/icon.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -50,19 +50,24 @@
           "default": 2000,
           "description": "Número máximo de tokens en la respuesta de GPT"
         },
-        "gptAssistant.unitTestsPrompt": {
+        "gptAssistant.lang": {
           "type": "string",
-          "default": "Act as a software development expert, especially in unit testing of Angular with Karma. Given the following TypeScript code, generate efficient unit tests with high code coverage and minimize resource imports by using mocks. Here's the code:",
+          "default": "Typescript",
+          "description": "Lenguaje"
+        },
+        "gptAssistant.unitTestsCharacterPrompt": {
+          "type": "string",
+          "default": "You are a IA development expert in unit testing in {LANG} code.",
           "description": "Prompt para generacion de pruebas unitarias"
         },
-        "gptAssistant.refactoringPrompt": {
+        "gptAssistant.refactoringCharacterPrompt": {
           "type": "string",
-          "default": "Act as a software development expert in refactoring TypeScript code. Refactor the following code to make it cleaner, more maintainable, and efficient, without losing any functionality. Here's the code:",
+          "default": "You are a IA development expert in refactoring {LANG} code.",
           "description": "Prompt para refactorizacion"
         },
         "gptAssistant.model": {
           "type": "string",
-          "default": "text-davinci-003",
+          "default": "gpt-3.5-turbo",
           "description": "Modelo GPT"
         }
       }
